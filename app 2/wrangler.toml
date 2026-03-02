@@ -1,0 +1,4 @@
+name = "austrino-connect"
+compatibility_date = "2026-03-02"
+pages_build_output_dir = "app2/dist"
+command = "npm run build"
