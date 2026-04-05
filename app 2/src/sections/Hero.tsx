@@ -11,7 +11,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="hero-bg min-h-screen bg-cover bg-center bg-no-repeat bg-fixed">
       {/* Alberta Mountains Background */}
       <div className="absolute inset-0">
         <img 

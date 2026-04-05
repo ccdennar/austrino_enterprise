@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 
 export default function CTA() {
   return (
-    <section className="py-24 relative">
+    <section className="cta-bg bg-cover bg-center bg-no-repeat">
       {/* Background with Meeting Image */}
       <div className="absolute inset-0">
         <img 

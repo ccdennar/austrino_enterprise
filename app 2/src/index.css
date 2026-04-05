@@ -76,3 +76,104 @@
   background: rgba(249, 115, 22, 0.3);
   color: white;
 }
+
+/* ============================================
+   SEASONAL THEME SYSTEM 
+   ============================================ */
+
+/* Seasonal Color Variables */
+[data-season="fall"] {
+  --primary: 30 95% 45%;
+  --accent: 25 95% 53%;
+  --background: 30 20% 8%;
+  --foreground: 40 30% 95%;
+  --card: 30 15% 12%;
+  --muted: 30 15% 15%;
+  --muted-foreground: 35 20% 65%;
+  --border: 30 20% 20%;
+  --ring: 30 95% 45%;
+}
+
+[data-season="winter"] {
+  --primary: 217 91% 60%;
+  --accent: 213 94% 68%;
+  --background: 220 30% 6%;
+  --foreground: 210 40% 98%;
+  --card: 220 20% 10%;
+  --muted: 220 15% 15%;
+  --muted-foreground: 215 20% 65%;
+  --border: 220 20% 20%;
+  --ring: 217 91% 60%;
+}
+
+/* Seasonal Background Images */
+[data-season="fall"] .hero-bg {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)), 
+                    url('https://kimi-web-img.moonshot.cn/img/cdn.sanity.io/15fbd588427a2bdbd206c16ee841ea56e8629013.jpg');
+}
+
+[data-season="winter"] .hero-bg {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8)), 
+                    url('https://kimi-web-img.moonshot.cn/img/www.scottsmorraphotography.com/c48d0cbc323eaf353b24ee422d38938c5d1ef07c.jpg');
+}
+
+[data-season="fall"] .about-bg {
+  background-image: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.4)), 
+                    url('https://kimi-web-img.moonshot.cn/img/www.rockymtnresorts.com/da4581db63ea7da62a6566c7917a1c4fe03e409a.jpg');
+}
+
+[data-season="winter"] .about-bg {
+  background-image: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.4)), 
+                    url('https://kimi-web-img.moonshot.cn/img/www.bordersofadventure.com/677eba2b044cd65686086b5417b3d283fb9d3d81.jpg');
+}
+
+[data-season="fall"] .cta-bg {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.9)), 
+                    url('https://kimi-web-img.moonshot.cn/img/www.kootenayrockies.com/74f3b3121eb910eb1e5a283b7c5073ee74ffd9de.jpg');
+}
+
+[data-season="winter"] .cta-bg {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.9)), 
+                    url('https://kimi-web-img.moonshot.cn/img/cdn.sanity.io/daf79967377e4f1eedd9d0f630e1d889c9c904df.jpg');
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.5s ease, border-color 0.5s ease, color 0.3s ease;
+}
+
+/* Seasonal text gradient overrides */
+[data-season="fall"] .text-gradient {
+  background-image: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+}
+
+[data-season="winter"] .text-gradient {
+  background-image: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+}
+
+/* Seasonal badge */
+.seasonal-indicator {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 50;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+[data-season="fall"] .seasonal-indicator::before {
+  content: "🍂 Fall";
+  color: #fbbf24;
+}
+
+[data-season="winter"] .seasonal-indicator::before {
+  content: "❄️ Winter";
+  color: #60a5fa;
+}
